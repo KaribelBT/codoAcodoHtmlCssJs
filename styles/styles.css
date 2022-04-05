@@ -151,7 +151,6 @@ nav ul li a:hover {
     color: #FFFFFF;
     font-size: 16px;
     line-height: 1.38em;
-
 }
 
 .intro button:hover {
@@ -160,8 +159,6 @@ nav ul li a:hover {
 }
 
 .soundtrack {
-    position: relative;
-    z-index: 1;
     width: 100%;
     height: 1204px;
     background-image: linear-gradient(225deg, #cbccd2 0%, #cbccd2 100%);
@@ -210,6 +207,59 @@ nav ul li a:hover {
     background-color: transparent;
 }
 
+.characters {
+    width: 100%;
+}
+
+.characters h2 {
+    margin: 55px 16px 20px 16px;
+    color: #e7c50b;
+    font-size: 2rem;
+    line-height: 1.16em;
+}
+
+.card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 #1d2f42;
+    padding: 16px;
+    margin: 20px;
+    text-align: center;
+    background-color: #276f83;
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d20043;
+}
+
+.card p {
+    font-family: "IBM Plex Mono", monospace;
+    color: #FFFFFF
+}
+
+.card img {
+    height: 200px;
+    width: 100px;
+}
+
 /*Medium devices (landscape tablets, 768px and up)*/
 @media only screen and (min-width: 768px) {
 
@@ -227,6 +277,32 @@ nav ul li a:hover {
         width: 45%;
     }
 
+    .soundtrack {
+        height: 700px;
+    }
+
+    .soundtrack h2 {
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .characters h2 {
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .card-container {
+        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        justify-content: space-around;
+        -ms-flex-pack: distribute;
+    }
+
+    .card {
+        width: 30%;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -305,7 +381,7 @@ nav ul li a:hover {
     }
 
     .soundtrack {
-        height: 1042px;
+        height: 780px;
     }
 
     .soundtrack h2 {
@@ -325,6 +401,21 @@ nav ul li a:hover {
     .iframe-container iframe {
         width: 45%;
         margin-bottom: 44px;
+    }
+
+    .characters h2 {
+        margin-right: 120px;
+        margin-left: 120px; 
+    }
+
+    .card-container {
+        margin-right: 120px;
+        margin-left: 120px;
+    }
+
+    .card {
+        width: 40%;
+        margin: 0 0 20px 0;
     }
 
 }
