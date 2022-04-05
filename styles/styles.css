@@ -7,6 +7,9 @@ html {
     margin: 0;
     padding: 0;
     border: 0;
+    font-size: 1rem;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: #1d2f42
 }
 
 body {
@@ -91,9 +94,8 @@ nav ul li a {
     height: 28px;
     text-decoration: none;
     color: #FFFFFF;
-    font-size: 1rem;
     font-weight: bold;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: "IBM Plex Mono", monospace;
 }
 
 nav ul li a:hover {
@@ -112,11 +114,66 @@ nav ul li a:hover {
     display: block;
 }
 
+.intro {
+    margin-top: 29px;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.intro h1 {
+    font-size: 1.5rem;
+    color: #d20043;
+    line-height: 1.16em;
+    max-width: 220px;
+}
+
+.intro p {
+    margin-top: 16px;
+    font-family: "IBM Plex Mono", monospace;
+    line-height: 1.57em;
+}
+
+.intro button {
+    width: 100%;
+    height: 48px;
+    margin-top: 36px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-family: "IBM Plex Mono", monospace;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.38em;
+    background-color: #276f83;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.intro button:hover {
+    background-color: #e7c50b;
+    color: #d20043;
+}
+
+/*Medium devices (landscape tablets, 768px and up)*/
+@media only screen and (min-width: 768px) {
+
+    .intro {
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+        max-width: 768px;
+    }
+
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
     header {
-        height: 60px;       
+        height: 60px;
     }
 
     #bars {
@@ -143,7 +200,7 @@ nav ul li a:hover {
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         justify-content: space-around;
-        -ms-flex-pack: distribute;        
+        -ms-flex-pack: distribute;
         padding-left: 0;
         margin-top: 20px;
     }
@@ -160,5 +217,38 @@ nav ul li a:hover {
     nav ul li a:active {
         color: #1d2f42;
         text-decoration: line-through;
+    }
+
+    .intro {
+        margin-left: 166px;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+        line-height: 1.31em;
+    }
+
+    .intro p {
+        max-width: 630px;
+        margin-top: 16px;
+        font-family: "IBM Plex Mono", monospace;
+        line-height: 1.50em;
+    }
+
+    .button-container {
+        text-align: left;
+        
+    }
+
+    .button-container button {
+        width: 226px;
+        height: 56px;
+        font-family: "IBM Plex Mono", monospace;
+        color: #060A24;
+        font-size: 18px;
+        line-height: 1.33em;
+        background-color: #00F3BB;
+        border: none;
+        border-radius: 25px;
     }
 }
