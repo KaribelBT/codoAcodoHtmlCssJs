@@ -137,7 +137,7 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.button-container button {  
+.button-container button {
     width: 100%;
     height: 48px;
     margin-top: 36px;
@@ -146,17 +146,68 @@ nav ul li a:hover {
     background-color: #276f83;
     border: none;
     border-radius: 5px;
-    cursor: pointer;  
+    cursor: pointer;
     font-family: "IBM Plex Mono", monospace;
     color: #FFFFFF;
     font-size: 16px;
     line-height: 1.38em;
-    
+
 }
 
 .intro button:hover {
     background-color: #e7c50b;
     color: #d20043;
+}
+
+.soundtrack {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 1204px;
+    background-image: linear-gradient(225deg, #cbccd2 0%, #cbccd2 100%);
+    -webkit-clip-path: polygon(100% 0, 100% 97%, 0 100%, 0 3%);
+    clip-path: polygon(100% 0, 100% 97%, 0 100%, 0 3%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.soundtrack h2 {
+    margin: 55px 16px 20px 16px;
+    color: #e7c50b;
+    font-size: 2rem;
+    line-height: 1.16em;
+}
+
+.iframe-container {
+    margin: 11px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 232px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: transparent;
 }
 
 /*Medium devices (landscape tablets, 768px and up)*/
@@ -170,6 +221,10 @@ nav ul li a:hover {
     .intro h1 {
         font-size: 2rem;
         max-width: 768px;
+    }
+
+    .iframe-container iframe {
+        width: 45%;
     }
 
 }
@@ -246,7 +301,30 @@ nav ul li a:hover {
     .button-container button {
         width: 226px;
         height: 56px;
-        line-height: 1.33em;        
+        line-height: 1.33em;
+    }
+
+    .soundtrack {
+        height: 1042px;
+    }
+
+    .soundtrack h2 {
+        margin-right: 110px;
+        margin-left: 110px;
+        line-height: 1.29em;
+    }
+
+    .iframe-container {
+        margin-right: 100px;
+        margin-left: 100px;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .iframe-container iframe {
+        width: 45%;
+        margin-bottom: 44px;
     }
 
 }
