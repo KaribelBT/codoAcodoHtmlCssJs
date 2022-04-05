@@ -14,7 +14,7 @@ body {
     flex-direction: column;
 }
 
-/*Small devices*/
+/*Small Devices*/
 header {
     background-color: #e7c50b;
     width: 100%;
@@ -84,7 +84,7 @@ nav ul {
     justify-content: space-around;
     padding-left: 16px;
 }
-  
+
 nav ul li a {
     display: block;
     width: 87px;
@@ -96,18 +96,69 @@ nav ul li a {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: #e7c50b;
 }
-  
-#button-navbar:checked ~ nav {
+
+#button-navbar:checked~nav {
     right: 0;
 }
 
-#button-navbar:checked ~ label #bars {
+#button-navbar:checked~label #bars {
     display: none;
 }
 
-#button-navbar:checked ~ label #times {
+#button-navbar:checked~label #times {
     display: block;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    header {
+        height: 60px;       
+    }
+
+    #bars {
+        display: none;
+    }
+
+    header img {
+        margin-left: 64px;
+        width: 40px;
+        height: 40px;
+    }
+
+    nav {
+        position: relative;
+        right: 0;
+        margin-top: 0;
+        height: 60px;
+        background-color: #e7c50b;
+    }
+
+    nav ul {
+        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        justify-content: space-around;
+        -ms-flex-pack: distribute;        
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    nav ul li a {
+        color: #276f83;
+    }
+
+    nav ul li a:hover {
+        color: #d20043;
+        text-decoration: line-through;
+    }
+
+    nav ul li a:active {
+        color: #1d2f42;
+        text-decoration: line-through;
+    }
 }
