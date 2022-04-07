@@ -221,7 +221,7 @@ nav ul li a:hover {
     line-height: 1.16em;
 }
 
-.card-container {
+.characters-card-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-box;
@@ -238,7 +238,7 @@ nav ul li a:hover {
     justify-content: center;
 }
 
-.card {
+.characters-card {
     box-shadow: 0 4px 8px 0 #1d2f42;
     padding: 16px;
     margin: 20px;
@@ -247,18 +247,18 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.card h3 {
+.characters-card h3 {
     font-size: 1.5rem;
     font-weight: bold;
     color: #d20043;
 }
 
-.card p {
+.characters-card p {
     font-family: "IBM Plex Mono", monospace;
     color: #FFFFFF
 }
 
-.card img {
+.characters-card img {
     height: 200px;
     width: 100px;
 }
@@ -277,6 +277,10 @@ nav ul li a:hover {
     -ms-flex-direction: column;
     flex-direction: column;
     box-sizing: border-box;
+}
+
+.contact-img {
+    display: none;
 }
 
 .contact h2 {
@@ -492,7 +496,7 @@ footer p {
         margin-left: 30px;
     }
 
-    .card-container {
+    .characters-card-container {
         flex-direction: row;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -501,7 +505,7 @@ footer p {
         -ms-flex-pack: distribute;
     }
 
-    .card {
+    .characters-card {
         width: 30%;
     }
 
@@ -653,14 +657,28 @@ footer p {
         margin-left: 120px;
     }
 
-    .card-container {
+    .characters-card-container {
         margin-right: 120px;
         margin-left: 120px;
     }
 
-    .card {
-        width: 40%;
+    .characters-card {
+        width: 30%;
         margin: 0 0 20px 0;
+    }
+
+    .form-container {
+        display: flex;        
+    }
+
+    .contact-img {
+        display: block;
+        height: 100%;
+        width: 50%;
+    }
+
+    .form {
+        width: 50%;
     }
 
     footer {

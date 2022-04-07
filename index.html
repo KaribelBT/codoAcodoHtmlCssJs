@@ -82,8 +82,8 @@
         <section class="characters">
             <a id="characters"></a>
             <h2>Personajes</h2>
-            <div class="card-container">
-                <div class="card">
+            <div class="characters-card-container">
+                <div class="characters-card">
                     <h3>Kitaro</h3>
                     <p>鬼太郎</p>
                     <img src="./assets/kitaro.webp" alt="kitaro">
@@ -92,7 +92,7 @@
                         cubrirle el hueco vacío. Lucha por la paz entre humanos y yōkai.
                     </p>
                 </div>
-                <div class="card">
+                <div class="characters-card">
                     <h3>Medama-oyaji</h3>
                     <p>目玉のおやじ / Padre Globo Ocular</p>
                     <img src="./assets/medama.webp" alt="medama-oyagi">
@@ -102,7 +102,7 @@
                         Le gusta permanecer limpio, y se baña a menudo en un tazón pequeño.
                     </p>
                 </div>
-                <div class="card">
+                <div class="characters-card">
                     <h3>Nezumi Otoko</h3>
                     <p>ねずみ男 / Hombre Rata</p>
                     <img src="./assets/nezumi.webp" alt="nezumi otoko">
@@ -114,7 +114,7 @@
                         graduado en la universidad de University of the Bizarre (怪奇大学 Kaiki Daigaku).
                     </p>
                 </div>
-                <div class="card">
+                <div class="characters-card">
                     <h3>Neko Musume</h3>
                     <p>猫娘 / Chica Gato</p>
                     <img src="./assets/neko.webp" alt="neko musume">
@@ -132,63 +132,69 @@
             <a id="contact"></a>
             <h2>Contacto</h2>
 
-            <form action="" class="form">
+            <div class="form-container">
+                <img src="./assets/gegegenokitaro.jpg" alt="gegege-no-kitaro" class="contact-img">
+                
+                <form action="" class="form">
 
-                <div class="input-container">
-                    <input type="text" id="fname" name="fname" class="input" placeholder="John">
-                    <label for="fname" class="label">Nombre</label>
-                </div>
-
-                <div class="input-container">
-                    <input type="text" id="lname" name="lname" class="input" placeholder="Doe">
-                    <label for="lname" class="label">Apellido</label>
-                </div>
-
-                <div class="input-container">
-                    <input type="email" id="email" name="email" class="input" placeholder="john.doe@gmail.com">
-                    <label for="email" class="label">Email</label>
-                </div>
-
-                <div class="radio-container">
-                    <div>
-                        <input type="radio" id="landline" name="tphone" value="landline" class="radio-imput">
-                        <label for="landline" class="radio-label">Fijo</label>
+                    <div class="input-container">
+                        <input type="text" id="fname" name="fname" class="input" placeholder="John">
+                        <label for="fname" class="label">Nombre</label>
                     </div>
-                    <div>
-                        <input type="radio" id="cellphone" name="tphone" value="cellphone" class="radio-imput"> 
-                        <label for="cellphone" class="radio-label">Celular</label>
+    
+                    <div class="input-container">
+                        <input type="text" id="lname" name="lname" class="input" placeholder="Doe">
+                        <label for="lname" class="label">Apellido</label>
                     </div>
-                </div>
-
-                <div class="input-container">
-                    <input type="tel" id="phone" name="phone" class="input" placeholder="11-11111111">
-                    <label for="phone" class="label">Número Teléfono</label>
-                </div>
-
-                <div class="select-container">
-                    <select name="reason" id="reason" class="select-imput">
-                        <option value="" selected disabled hidden class="select-option">Razón</option>
-                        <option value="comment" class="select-option">Comentario</option>
-                        <option value="question" class="select-option">Pregunta</option>
-                        <option value="claim" class="select-option">Reclamo</option>
-                    </select>
-                </div>
-
-                <div class="input-container">
-                    <input type="text" id="subject" name="subject" class="input" placeholder="Quisiera saber..">
-                    <label for="subject" class="label">Asunto</label>
-                </div>
-
-                <div class="input-container">
-                    <textarea id="message" name="message" class="input" rows="5" placeholder="Escribe tu mensaje aquí">
-                        </textarea>
-                    <label for="message" class="label">Mensaje</label>
-                </div>
-
-                <button type="submit">Enviar</button>
-            </form>
+    
+                    <div class="input-container">
+                        <input type="email" id="email" name="email" class="input" placeholder="john.doe@gmail.com">
+                        <label for="email" class="label">Email</label>
+                    </div>
+    
+                    <div class="radio-container">
+                        <div>
+                            <input type="radio" id="landline" name="tphone" value="landline" class="radio-imput">
+                            <label for="landline" class="radio-label">Fijo</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="cellphone" name="tphone" value="cellphone" class="radio-imput"> 
+                            <label for="cellphone" class="radio-label">Celular</label>
+                        </div>
+                    </div>
+    
+                    <div class="input-container">
+                        <input type="tel" id="phone" name="phone" class="input" placeholder="11-11111111">
+                        <label for="phone" class="label">Número Teléfono</label>
+                    </div>
+    
+                    <div class="select-container">
+                        <select name="reason" id="reason" class="select-imput">
+                            <option value="" selected disabled hidden class="select-option">Razón</option>
+                            <option value="comment" class="select-option">Comentario</option>
+                            <option value="question" class="select-option">Pregunta</option>
+                            <option value="claim" class="select-option">Reclamo</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-container">
+                        <input type="text" id="subject" name="subject" class="input" placeholder="Quisiera saber..">
+                        <label for="subject" class="label">Asunto</label>
+                    </div>
+    
+                    <div class="input-container">
+                        <textarea id="message" name="message" class="input" rows="5" placeholder="Escribe tu mensaje aquí">
+                            </textarea>
+                        <label for="message" class="label">Mensaje</label>
+                    </div>
+    
+                    <button type="submit">Enviar</button>
+    
+                </form>
+            </div>            
 
         </section>
+
     </main>
 
     <footer>
