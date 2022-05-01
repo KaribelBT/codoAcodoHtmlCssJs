@@ -377,43 +377,85 @@ nav ul li a:hover {
     font-family: "IBM Plex Mono", monospace;
 }
 
-.radio-imput{
+.radio-imput {
     visibility: hidden;
     position: absolute;
 }
 
-.radio-imput + label:before{
-    height:12px;
-    width:12px;
+.radio-imput+label:before {
+    height: 12px;
+    width: 12px;
     margin-right: 2px;
     content: " ";
-    display:inline-block;
+    display: inline-block;
     vertical-align: baseline;
-    border:1px solid #1d2f42;
+    border: 1px solid #1d2f42;
 }
 
-.radio-imput:checked + label:before{
-    background:#d20043;
+.radio-imput:checked+label:before {
+    background: #d20043;
 }
 
-.radio-imput + label:before{
-    border-radius:50%;
+.radio-imput+label:before {
+    border-radius: 50%;
 }
 
 .select-container {
     margin: 17px 20px 17px 17px;
+    position: relative;
 }
 
-.select-imput{
-    background-color: transparent;
-    border: 1px solid #1d2f42;
-    border-radius: 7px;
-    padding: 10px;
-    width: 100%;
-    font-family: "IBM Plex Mono", monospace;
+.select-container select {
+    display: none;
+}
+
+.select-selected {
+    background-color: #cbccd2;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #1d2f42 transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #1d2f42 transparent;
+    top: 7px;
+}
+
+.select-items div,
+.select-selected {
+    color: #1d2f42;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
+    user-select: none;
 }
 
+.select-items {
+    position: absolute;
+    background-color: #cbccd2;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
 
 form button {
     height: 48px;
@@ -669,7 +711,7 @@ footer p {
     }
 
     .form-container {
-        display: flex;        
+        display: flex;
     }
 
     .contact-img {
