@@ -403,6 +403,8 @@ nav ul li a:hover {
 .select-container {
     margin: 17px 20px 17px 17px;
     position: relative;
+    border: 1px solid #1d2f42;
+
 }
 
 .select-container select {
@@ -446,6 +448,9 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     z-index: 99;
+    box-shadow: 0px 9px 31px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 9px 31px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 9px 31px 0px rgba(0,0,0,0.75);
 }
 
 .select-hide {
