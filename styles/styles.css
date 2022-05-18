@@ -764,6 +764,7 @@ footer p {
 
     .form-container {
         display: flex;
+        align-items: center
     }
 
     .contact-img {

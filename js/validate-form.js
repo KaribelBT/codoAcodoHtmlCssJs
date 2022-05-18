@@ -1,29 +1,3 @@
-const form = document.getElementById('form');
-const inputs = document.querySelectorAll('#form input');
-const tphone = document.querySelectorAll('input[name="tphone"]');
-const reason = document.getElementById('reason');
-const message = document.getElementById('message');
-
-const expresions = {
-	fname: /^[a-zA-ZÀ-ÿ\s]{2,40}$/,
-    lname: /^[a-zA-ZÀ-ÿ\s]{2,40}$/,
-    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    phone: /^\d{7,14}$/,    
-    subject: /^.{1,100}$/,
-    message: /^.{1,350}$/
-}
-
-const fields = {
-	fname: false,
-	lname: false,
-	email: false,
-	tphone: false,
-	phone: false,
-    reason: true,
-    subject: false,
-    message: false
-}
-
 const validateForm = (e) => {
 	switch (e.target.name) {
 		case 'fname':
@@ -99,9 +73,15 @@ form.addEventListener('submit', (e) => {
     }
     const isFormValid = Object.values(fields).every(
         value => value === true
-    );
-    console.log(fields)
+    );    
     if(isFormValid) {
-        console.log('exitoood')
+        Object
+            .keys(fields)
+            .filter(field => field != 'tphone' && field != 'reason')
+            .map(nf => {
+                document.querySelector(`#${nf}-group i`).classList.remove('fa-check-circle');
+                document.querySelector(`#${nf}-group i`).classList.remove('form-icon-ok');
+            })        
+        form.reset();
     }
 });

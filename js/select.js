@@ -39,6 +39,9 @@ for (i = 0; i < l; i++) {
                 }
             }
             h.click();
+            fields.reason = true
+            document.querySelector(`#reason-group .form-field-error`).classList.remove('form-field-error-active');
+
         });
         b.appendChild(c);
     }
