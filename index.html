@@ -135,58 +135,76 @@
             <div class="form-container">
                 <img src="./assets/gegegenokitaro.jpg" alt="gegege-no-kitaro" class="contact-img">
 
-                <form action="" class="form">
+                <form action="" id="form" class="form">
 
-                    <div class="input-container">
+                    <div class="input-container" id="fname-group">
                         <input type="text" id="fname" name="fname" class="input" placeholder="John">
-                        <label for="fname" class="label">Nombre</label>
+                        <label for="fname" class="label">Nombre*</label>
+                        <i class="form-icon fas"></i>
+                        <p class="form-field-error">Requerido. El nombre debe tener solo letras y un máximo de 40 caracteres.</span>
                     </div>
 
-                    <div class="input-container">
+                    <div class="input-container" id="lname-group">
                         <input type="text" id="lname" name="lname" class="input" placeholder="Doe">
-                        <label for="lname" class="label">Apellido</label>
+                        <label for="lname" class="label">Apellido*</label>
+                        <i class="form-icon fas"></i>
+                        <p class="form-field-error">Requerido. El apellido debe tener solo letras y un máximo de 40 caracteres.</p>
                     </div>
 
-                    <div class="input-container">
+                    <div class="input-container" id="email-group">
                         <input type="email" id="email" name="email" class="input" placeholder="john.doe@gmail.com">
-                        <label for="email" class="label">Email</label>
+                        <label for="email" class="label">Email*</label>
+                        <i class="form-icon fas"></i>
+                        <p class="form-field-error">Requerido. El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
                     </div>
 
-                    <div class="radio-container">
-                        <div>
-                            <input type="radio" id="landline" name="tphone" value="landline" class="radio-imput">
-                            <label for="landline" class="radio-label">Fijo</label>
+                    <div class="radio-container" id="tphone-group">
+                        <div class="radio-option-container">
+                            <div>
+                                <input type="radio" id="landline" name="tphone" value="landline" class="radio-imput">
+                                <label for="landline" class="radio-label">Fijo</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="cellphone" name="tphone" value="cellphone" class="radio-imput">
+                                <label for="cellphone" class="radio-label">Celular</label>
+                            </div>
                         </div>
-                        <div>
-                            <input type="radio" id="cellphone" name="tphone" value="cellphone" class="radio-imput">
-                            <label for="cellphone" class="radio-label">Celular</label>
-                        </div>
+                        <p class="form-field-error">Requerido. Seleccione una opción.</p>                        
                     </div>
 
-                    <div class="input-container">
+                    <div class="input-container" id="phone-group">
                         <input type="tel" id="phone" name="phone" class="input" placeholder="11-11111111">
-                        <label for="phone" class="label">Número Teléfono</label>
+                        <label for="phone" class="label">Número Teléfono*</label>
+                        <i class="form-icon fas"></i>
+                        <p class="form-field-error">Requerido. El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
                     </div>
 
-                    <div class="select-container">
-                        <select>
-                            <option value="">Razón:</option>
-                            <option value="comment" class="select-option">Comentario</option>
-                            <option value="question" class="select-option">Pregunta</option>
-                            <option value="claim" class="select-option">Reclamo</option>
-                        </select>
+                    <div class="select-group" id="reason-group">
+                        <div class="select-container">
+                            <select id="reason">
+                                <option value="none">Razón*</option>
+                                <option value="comment" class="select-option">Comentario</option>
+                                <option value="question" class="select-option">Pregunta</option>
+                                <option value="claim" class="select-option">Reclamo</option>
+                            </select>    
+                        </div>  
+                        <p class="form-field-error">Requerido. Seleccione una opción.</p>                                            
                     </div>
 
-                    <div class="input-container">
+                    <div class="input-container" id="subject-group">
                         <input type="text" id="subject" name="subject" class="input" placeholder="Quisiera saber..">
-                        <label for="subject" class="label">Asunto</label>
+                        <label for="subject" class="label">Asunto*</label>
+                        <i class="form-icon fas"></i>
+                        <p class="form-field-error">Requerido. El asunto debe tener un máximo de 100 caracteres.</p>
                     </div>
 
-                    <div class="input-container">
+                    <div class="input-container" id="message-group">
                         <textarea id="message" name="message" class="input" rows="5"
                             placeholder="Escribe tu mensaje aquí">
-                            </textarea>
-                        <label for="message" class="label">Mensaje</label>
+                        </textarea>
+                        <label for="message" class="label">Mensaje*</label>
+                        <i class="form-icon fas"></i>
+                        <p class="form-field-error">Requerido. El mensaje debe tener un máximo de 350 caracteres.</p>
                     </div>
 
                     <button type="submit">Enviar</button>
@@ -220,6 +238,7 @@
     </footer>
     <script src="./js/select.js"></script>
     <script src="./js/validate-form.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

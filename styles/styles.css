@@ -265,7 +265,7 @@ nav ul li a:hover {
 
 .contact {
     width: 100%;
-    height: 880px;
+    height: 1100px;
     background-image: linear-gradient(225deg, #cbccd2 0%, #cbccd2 100%);
     -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
@@ -292,6 +292,7 @@ nav ul li a:hover {
 
 .form {
     width: 100%;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -302,6 +303,7 @@ nav ul li a:hover {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    align-items: stretch;
 }
 
 .input-container {
@@ -365,6 +367,10 @@ nav ul li a:hover {
 }
 
 .radio-container {
+    margin: 17px 20px 17px 17px;
+}
+
+.radio-option-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -400,11 +406,13 @@ nav ul li a:hover {
     border-radius: 50%;
 }
 
+.select-group {
+    margin: 17px 20px 17px 17px;    
+}
+
 .select-container {
-    margin: 17px 20px 17px 17px;
     position: relative;
     border: 1px solid #1d2f42;
-
 }
 
 .select-container select {
@@ -482,6 +490,37 @@ form button:hover {
     transform: translateY(-2px);
 }
 
+.input-container-extra-margin {
+    margin-bottom: 40px;
+}
+
+.form-field-error {
+    margin: 5px;
+    font-size: 0.7rem;
+    color: red;
+    display: none;
+}
+
+.form-field-error-active{
+    display: block;
+}
+
+.form-icon {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+}
+
+.form-icon-error {
+    color: red;
+}
+
+.form-icon-ok {
+    color: green;
+}
+
 footer {
     margin: 24px;
     height: 100px;
@@ -555,6 +594,10 @@ footer p {
 
     .characters-card {
         width: 30%;
+    }
+
+    .contact {
+        height: 1150px;
     }
 
     footer {
@@ -715,19 +758,27 @@ footer p {
         margin: 0 0 20px 0;
     }
 
+    .contact {
+        height: 1000px;
+    }
+
     .form-container {
         display: flex;
     }
 
     .contact-img {
         display: flex;
-        height: 71%;
+        height: 90%;
         width: 50%;
     }
 
     .form {
         width: 50%;
-        height: 75%;
+
+    }
+
+    .input-container-extra-margin {
+        margin-bottom: 20px;
     }
 
     footer {
