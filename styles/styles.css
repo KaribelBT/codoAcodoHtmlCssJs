@@ -284,7 +284,7 @@ nav ul li a:hover {
 }
 
 .contact h2 {
-    margin: 100px 0 16px 16px;
+    margin: 120px 0 16px 16px;
     color: #e7c50b;
     font-size: 2rem;
     line-height: 1.16em;
@@ -407,7 +407,7 @@ nav ul li a:hover {
 }
 
 .select-group {
-    margin: 17px 20px 17px 17px;    
+    margin: 17px 20px 17px 17px;
 }
 
 .select-container {
@@ -456,9 +456,9 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     z-index: 99;
-    box-shadow: 0px 9px 31px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 9px 31px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 9px 31px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 9px 31px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 9px 31px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 9px 31px 0px rgba(0, 0, 0, 0.75);
 }
 
 .select-hide {
@@ -501,16 +501,16 @@ form button:hover {
     display: none;
 }
 
-.form-field-error-active{
+.form-field-error-active {
     display: block;
 }
 
 .form-icon {
-	position: absolute;
-	right: 10px;
-	bottom: 15px;
-	z-index: 100;
-	font-size: 16px;
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
 }
 
 .form-icon-error {
