@@ -104,4 +104,4 @@ document.addEventListener('keyup', e => {
     if (e.key == 'Escape' && document.querySelector('.modal.is-visible')) {
         modal.classList.remove('is-visible');
     }
-})
+});
