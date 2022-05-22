@@ -2,6 +2,7 @@ window.onload = function () {
     form.reset();
 };
 
+
 const validateForm = (e) => {
     switch (e.target.name) {
         case 'fname':
@@ -86,7 +87,21 @@ form.addEventListener('submit', (e) => {
                 document.querySelector(`#${nf}-group i`).classList.remove('fa-check-circle');
                 document.querySelector(`#${nf}-group i`).classList.remove('form-icon-ok');
             })
+        modal.classList.add('is-visible');
         form.reset();
-        
+
     }
 });
+
+
+closeModal.addEventListener('click', () => {
+    modal.classList.remove('is-visible');
+})
+document.addEventListener('click', () => {
+    modal.classList.remove('is-visible');
+})
+document.addEventListener('keyup', e => {
+    if (e.key == 'Escape' && document.querySelector('.modal.is-visible')) {
+        modal.classList.remove('is-visible');
+    }
+})

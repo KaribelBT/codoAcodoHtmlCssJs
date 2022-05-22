@@ -552,6 +552,68 @@ footer p {
     color: #d20043;
 }
 
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    visibility: hidden;    
+    transition: all 0.35s ease-in;
+}
+
+.modal-dialog {
+    position: relative;
+    border-radius: 5px;
+    background: #CBCCD2;
+    overflow: auto;
+    cursor: default;
+}
+
+.modal-dialog>* {
+    padding: 1rem;
+}
+
+.modal-header,
+.modal-footer,
+.modal-close {
+    background: #1D2F42;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.modal-content {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal p+p {
+    margin-top: 1rem;
+}
+
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+}
+
+.modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
 /*Medium devices (landscape tablets, 768px and up)*/
 @media only screen and (min-width: 768px) {
 

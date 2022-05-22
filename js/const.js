@@ -3,6 +3,8 @@ const inputs = document.querySelectorAll('#form input');
 const tphone = document.querySelectorAll('input[name="tphone"]');
 const reason = document.getElementById('reason');
 const message = document.getElementById('message');
+const closeModal = document.getElementById('close-modal');
+const modal = document.getElementById('form-modal');
 
 const expresions = {
 	fname: /^[a-zA-ZÀ-ÿ\s]{2,40}$/,
