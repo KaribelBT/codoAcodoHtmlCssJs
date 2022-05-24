@@ -1,7 +1,12 @@
 const form = document.getElementById('form');
 const inputs = document.querySelectorAll('#form input');
+const fname = document.getElementById('fname');
+const lname = document.getElementById('lname');
+const email = document.getElementById('email');
 const tphone = document.querySelectorAll('input[name="tphone"]');
+const phone = document.getElementById('phone');
 const reason = document.getElementById('reason');
+const subject = document.getElementById('subject');
 const message = document.getElementById('message');
 const closeModal = document.getElementById('close-modal');
 const modal = document.getElementById('form-modal');

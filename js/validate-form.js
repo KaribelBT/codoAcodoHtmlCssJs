@@ -68,14 +68,24 @@ tphone.forEach((input) => {
     input.addEventListener('change', validateForm);
 });
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+const validateFormOnSubmit = () => {
     if (!document.querySelectorAll('input[name="tphone"]:checked').length) {
         document.querySelector(`#tphone-group .form-field-error`).classList.add('form-field-error-active');
     }
     if (reason.options[reason.selectedIndex].value === "none") {
         document.querySelector(`#reason-group .form-field-error`).classList.add('form-field-error-active');
     }
+    validateField(expresions.fname, fname, 'fname');
+    validateField(expresions.lname, lname, 'lname');
+    validateField(expresions.email, email, 'email');
+    validateField(expresions.phone, phone, 'phone');
+    validateField(expresions.subject, subject, 'subject');
+    validateField(expresions.message, message, 'message');
+}
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    validateFormOnSubmit();
     const isFormValid = Object.values(fields).every(
         value => value === true
     );
